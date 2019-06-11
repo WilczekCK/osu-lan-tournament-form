@@ -10,7 +10,7 @@
 <li>PUG</li>
 </ul>
 
-I broke the DRY rule on Google Sheets Api, because I just didn't know how to do make it simple ¯\_(ツ)_/¯
+I broke the DRY rule on Google Sheets Api, because I just didn't know how to make it simple ¯\_(ツ)_/¯
 
 
 License: MIT<br>
