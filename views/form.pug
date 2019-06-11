@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  #wrap
+    #left
+      #map
+        iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d640.2921610044541!2d20.014839639525608!3d50.06440324388656!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfd34a8b9f606d97!2sEXPO+Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1559772856330!5m2!1spl!2spl&z=-1000000" frameborder="0" style="border:0" allowfullscreen)
+    #right
+        a(href="/")
+          img.logo(src='images/logo.png' alt="logo turnieju")
+        h4 Formularz Zgłoszeniowy
+
+        #form(style="text-align:left")
+          form(method='POST' action=path+"/add")
+            label(for='nickname') NICKNAME
+            input(name='nickname' type='text')
+
+            label(for='id') ID
+            input(name='id' type='number' min="0" step="1")
+
+            label(for='email') EMAIL
+            input(name='email' type='email')
+
+            p.confirm
+              label
+                input(type="checkbox", name="agree", required)
+                b Akceptuje 
+                  a(style='color:#ff7f66' target='_blank' href='https://docs.google.com/document/d/1mvhjKeyxYZAd42rI3jQ__mrh_Dod9KRlwgTG_LN2JB0/edit?usp=sharing') regulamin 
+                  | turnieju
+              
+            p.confirm
+              label
+                input(type="checkbox", name="discord", required)
+                b Dołączyłem do 
+                  a(style='color:#ff7f66' target='_blank' href='https://discord.gg/sQ6sDUR') discorda 
+                  | turniejowego
+
+            input(type='submit' value='Wyślij')

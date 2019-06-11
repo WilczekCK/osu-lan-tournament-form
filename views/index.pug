@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  #wrap
+    #middle
+      a(href="/")
+        img.logo(src='images/logo.png' alt="logo turnieju")
+      h2 TRYB GRY
+      #mode-selector
+        a(href='std')
+          .mode
+            img.logo(src='images/std.png' alt="tryb standard")
+            h2 Standard
+        a(href='mania')
+          .mode
+            img.logo(src='images/mania.png' alt="tryb mania")
+            h2 Mania
+      #partners
+        div
